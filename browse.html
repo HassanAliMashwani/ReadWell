@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Books - ReadWell</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="browse.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>ReadWell</span>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="browse.html" class="active"><i class="fas fa-compass"></i> Browse</a></li>
+                    <li><a href="#"><i class="fas fa-bookmark"></i> My Library</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" id="globalSearch" placeholder="Search by title, author, or genre...">
+                    <button onclick="performSearch()"><i class="fas fa-search"></i></button>
+                </div>
+                <button class="btn-notification">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>Browse All Books</h1>
+                <p>Discover thousands of books across all genres</p>
+            </div>
+
+            <!-- Browse Controls -->
+            <div class="browse-controls">
+                <div class="controls-left">
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="view-btn" data-view="list">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                    <div class="results-count">
+                        Showing <span id="resultsCount">24</span> results
+                    </div>
+                </div>
+                
+                <div class="controls-right">
+                    <div class="sort-dropdown">
+                        <select id="sortSelect">
+                            <option value="popularity">Sort by: Popularity</option>
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="rating">Highest Rated</option>
+                            <option value="title">Title A-Z</option>
+                            <option value="author">Author A-Z</option>
+                        </select>
+                    </div>
+                    <button class="btn-filter" id="filterToggle">
+                        <i class="fas fa-filter"></i>
+                        Filters
+                    </button>
+                </div>
+            </div>
+
+            <div class="browse-content">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar" id="filtersSidebar">
+                    <div class="filters-header">
+                        <h3>Filters</h3>
+                        <button class="btn-clear" onclick="clearAllFilters()">Clear All</button>
+                    </div>
+
+                    <!-- Search Filter -->
+                    <div class="filter-group">
+                        <label for="searchFilter">Search</label>
+                        <div class="search-filter">
+                            <input type="text" id="searchFilter" placeholder="Title or author...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+
+                    <!-- Genre Filter -->
+                    <div class="filter-group">
+                        <label>Genres</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox">
+                                <input type="checkbox" value="fiction" checked>
+                                <span class="checkmark"></span>
+                                Fiction
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" value="mystery">
+                                <span class="checkmark"></span>
+                                Mystery
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" value="scifi">
+                                <span class="checkmark"></span>
+                                Science Fiction
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" value="fantasy">
+                                <span class="checkmark"></span>
+                                Fantasy
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" value="romance">
+                                <span class="checkmark"></span>
+                                Romance
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" value="thriller">
+                                <span class="checkmark"></span>
+                                Thriller
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" value="biography">
+                                <span class="checkmark"></span>
+                                Biography
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" value="history">
+                                <span class="checkmark"></span>
+                                History
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Rating Filter -->
+                    <div class="filter-group">
+                        <label>Minimum Rating</label>
+                        <div class="rating-filter">
+                            <div class="stars-selector">
+                                <input type="radio" name="rating" id="rating0" value="0" checked>
+                                <label for="rating0">Any rating</label>
+                                
+                                <input type="radio" name="rating" id="rating4" value="4">
+                                <label for="rating4">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    4.0+</label>
+                                </label>
+                                
+                                <input type="radio" name="rating" id="rating3" value="3">
+                                <label for="rating3">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    3.0+</label>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Year Filter -->
+                    <div class="filter-group">
+                        <label>Publication Year</label>
+                        <div class="range-inputs">
+                            <input type="number" id="yearFrom" placeholder="From" min="1900" max="2024">
+                            <span>to</span>
+                            <input type="number" id="yearTo" placeholder="To" min="1900" max="2024">
+                        </div>
+                    </div>
+
+                    <!-- Language Filter -->
+                    <div class="filter-group">
+                        <label>Language</label>
+                        <select id="languageSelect">
+                            <option value="all">All Languages</option>
+                            <option value="english">English</option>
+                            <option value="spanish">Spanish</option>
+                            <option value="french">French</option>
+                            <option value="german">German</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-apply-filters" onclick="applyFilters()">
+                        Apply Filters
+                    </button>
+                </aside>
+
+                <!-- Books Grid -->
+                <section class="books-results">
+                    <div class="books-container grid-view" id="booksContainer">
+                        <!-- Books will be dynamically loaded here -->
+                    </div>
+
+                    <!-- Loading State -->
+                    <div class="loading-state" id="loadingState">
+                        <div class="loading-spinner"></div>
+                        <p>Loading books...</p>
+                    </div>
+
+                    <!-- No Results State -->
+                    <div class="no-results" id="noResults" style="display: none;">
+                        <i class="fas fa-search"></i>
+                        <h3>No books found</h3>
+                        <p>Try adjusting your filters or search terms</p>
+                        <button class="btn btn-primary" onclick="clearAllFilters()">
+                            Clear All Filters
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn disabled" id="prevPage">
+                    <i class="fas fa-chevron-left"></i>
+                    Previous
+                </button>
+                <div class="pagination-numbers" id="paginationNumbers">
+                    <!-- Pagination numbers will be generated here -->
+                </div>
+                <button class="pagination-btn" id="nextPage">
+                    Next
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-book-open"></i>
+                        <span>ReadWell</span>
+                    </div>
+                    <p>Your gateway to thousands of books. Discover, read, and enjoy literature from around the world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse</a></li>
+                        <li><a href="#">My Library</a></li>
+                        <li><a href="#">Profile</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Fiction</a></li>
+                        <li><a href="#">Non-Fiction</a></li>
+                        <li><a href="#">Science Fiction</a></li>
+                        <li><a href="#">Biography</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ReadWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="browse.js"></script>
+</body>
+</html>

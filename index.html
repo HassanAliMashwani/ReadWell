@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadWell - Your Digital Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="browse.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>ReadWell</span>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="browse.html"><i class="fas fa-compass"></i> Browse</a></li>                    
+                    <li><a href="#"><i class="fas fa-bookmark"></i> My Library</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search by title, author, or genre...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <button class="btn-notification">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Discover Your Next Favorite Book</h1>
+                    <p>Explore thousands of books across all genres. From classic literature to modern bestsellers.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Start Reading
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-play-circle"></i>
+                            See Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="book-stack">
+                        <div class="book book-1"></div>
+                        <div class="book book-2"></div>
+                        <div class="book book-3"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Books Section -->
+            <section class="featured-section">
+                <div class="section-header">
+                    <h2>Featured Books</h2>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="books-grid">
+                    <!-- Book 1 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://covers.openlibrary.org/b/id/8259447-L.jpg" alt="The Great Gatsby Cover">
+                            <div class="book-overlay">
+                                <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="btn-read">Read Now</button>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>The Great Gatsby</h3>
+                            <p class="author">F. Scott Fitzgerald</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-value">4.5</span>
+                            </div>
+                            <p class="book-description">A classic novel of the Jazz Age, exploring themes of idealism, resistance to change, and excess.</p>
+                        </div>
+                    </div>
+
+                    <!-- Book 2 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://covers.openlibrary.org/b/id/13018254-L.jpg" alt="To Kill a Mockingbird Cover">
+                            <div class="book-overlay">
+                                <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="btn-read">Read Now</button>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>To Kill a Mockingbird</h3>
+                            <p class="author">Harper Lee</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-value">5.0</span>
+                            </div>
+                            <p class="book-description">A gripping tale of racial injustice and childhood innocence in the American South.</p>
+                        </div>
+                    </div>
+
+                    <!-- Book 3 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://covers.openlibrary.org/b/id/8264454-L.jpg" alt="1984 Cover">
+                            <div class="book-overlay">
+                                <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="btn-read">Read Now</button>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>1984</h3>
+                            <p class="author">George Orwell</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-value">4.8</span>
+                            </div>
+                            <p class="book-description">A dystopian social science fiction novel about totalitarian control.</p>
+                        </div>
+                    </div>
+
+                    <!-- Book 4 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://covers.openlibrary.org/b/id/8222294-L.jpg" alt="Pride and Prejudice Cover">
+                            <div class="book-overlay">
+                                <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="btn-read">Read Now</button>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>Pride and Prejudice</h3>
+                            <p class="author">Jane Austen</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-value">4.6</span>
+                            </div>
+                            <p class="book-description">A romantic novel of manners that depicts the emotional development of protagonist Elizabeth Bennet.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categories Section -->
+            <section class="categories-section">
+                <div class="section-header">
+                    <h2>Browse by Genre</h2>
+                    <a href="#" class="view-all">All Genres <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <i class="fas fa-magic"></i>
+                        <h3>Fantasy</h3>
+                        <p>1,245 books</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Science Fiction</h3>
+                        <p>892 books</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Romance</h3>
+                        <p>1,567 books</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-search"></i>
+                        <h3>Mystery</h3>
+                        <p>1,034 books</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-history"></i>
+                        <h3>History</h3>
+                        <p>756 books</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-user"></i>
+                        <h3>Biography</h3>
+                        <p>643 books</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Books Section -->
+            <section class="recent-section">
+                <div class="section-header">
+                    <h2>Recently Added</h2>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="books-grid">
+                    <!-- Books 5-8 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://covers.openlibrary.org/b/id/8260717-L.jpg" alt="The Hobbit Cover">
+                            <div class="book-overlay">
+                                <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="btn-read">Read Now</button>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>The Hobbit</h3>
+                            <p class="author">J.R.R. Tolkien</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-value">4.9</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://covers.openlibrary.org/b/id/8260718-L.jpg" alt="Brave New World Cover">
+                            <div class="book-overlay">
+                                <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="btn-read">Read Now</button>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>Brave New World</h3>
+                            <p class="author">Aldous Huxley</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-value">4.4</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://covers.openlibrary.org/b/id/8260719-L.jpg" alt="The Catcher in the Rye Cover">
+                            <div class="book-overlay">
+                                <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="btn-read">Read Now</button>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>The Catcher in the Rye</h3>
+                            <p class="author">J.D. Salinger</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-value">4.7</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://covers.openlibrary.org/b/id/8260720-L.jpg" alt="Lord of the Flies Cover">
+                            <div class="book-overlay">
+                                <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="btn-read">Read Now</button>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>Lord of the Flies</h3>
+                            <p class="author">William Golding</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-value">4.2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- More Books Section -->
+            <section class="more-books-section">
+                <div class="section-header">
+                    <h2>Popular This Week</h2>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="books-grid">
+                    <!-- Books 9-12 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://covers.openlibrary.org/b/id/8260721-L.jpg" alt="The Alchemist Cover">
+                            <div class="book-overlay">
+                                <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="btn-read">Read Now</button>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>The Alchemist</h3>
+                            <p class="author">Paulo Coelho</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-value">4.5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://covers.openlibrary.org/b/id/8260722-L.jpg" alt="The Da Vinci Code Cover">
+                            <div class="book-overlay">
+                                <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="btn-read">Read Now</button>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>The Da Vinci Code</h3>
+                            <p class="author">Dan Brown</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-value">4.3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://covers.openlibrary.org/b/id/8260723-L.jpg" alt="The Kite Runner Cover">
+                            <div class="book-overlay">
+                                <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="btn-read">Read Now</button>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>The Kite Runner</h3>
+                            <p class="author">Khaled Hosseini</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-value">4.6</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://covers.openlibrary.org/b/id/8260724-L.jpg" alt="The Hunger Games Cover">
+                            <div class="book-overlay">
+                                <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="btn-read">Read Now</button>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>The Hunger Games</h3>
+                            <p class="author">Suzanne Collins</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-value">4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Pagination -->
+    <div class="pagination">
+        <div class="container">
+            <button class="pagination-btn disabled">
+                <i class="fas fa-chevron-left"></i>
+                Previous
+            </button>
+            <div class="pagination-numbers">
+                    <button class="pagination-number active">1</button>
+                    <button class="pagination-number">2</button>
+                    <button class="pagination-number">3</button>
+                    <button class="pagination-number">4</button>
+                    <button class="pagination-number">5</button>
+            </div>
+            <button class="pagination-btn">
+                Next
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-book-open"></i>
+                        <span>ReadWell</span>
+                    </div>
+                    <p>Your gateway to thousands of books. Discover, read, and enjoy literature from around the world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Browse</a></li>
+                        <li><a href="#">My Library</a></li>
+                        <li><a href="#">Profile</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Fiction</a></li>
+                        <li><a href="#">Non-Fiction</a></li>
+                        <li><a href="#">Science Fiction</a></li>
+                        <li><a href="#">Biography</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ReadWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
