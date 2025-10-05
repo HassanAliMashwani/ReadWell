@@ -107,6 +107,9 @@ ReadWell/
 **Hassan Ali Mashwani**
 - GitHub: [@HassanAliMashwani](https://github.com/HassanAliMashwani)
 - Project: [ReadWell Repository](https://github.com/HassanAliMashwani/ReadWell)
+  
+**Aalyan Mughal**
+- Project: [ReadWell Repository](https://github.com/HassanAliMashwani/ReadWell)
 
 ## 🤝 Contributing
 
